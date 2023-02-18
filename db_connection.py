@@ -6,7 +6,7 @@ from contextlib import contextmanager
 def connection():
     conn = None
     try:
-        conn = connect(host='balarama.db.elephantsql.com', user='hvlvohkr', database='hvlvohkr',
+        conn = connect(host='localhost', user='users_hw.db', database='users_hw.db',
                        password='')
         yield conn
         conn.commit()

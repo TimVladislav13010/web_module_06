@@ -21,7 +21,7 @@ groups = ['ПЦБ-13з', 'ТП-05-1', 'КН-51']
 NUMBER_TEACHERS = 5
 NUMBER_STUDENTS = 50
 fake = Faker()
-connect = sqlite3.connect('hw.db')
+connect = sqlite3.connect('users_hw.db')
 cur = connect.cursor()
 
 
