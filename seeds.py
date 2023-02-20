@@ -6,6 +6,8 @@ from pprint import pprint
 
 from faker import Faker
 
+from db_connection import database
+
 disciplines = [
     "Вища математика",
     "Дискретна математика",
@@ -21,7 +23,7 @@ groups = ['ПЦБ-13з', 'ТП-05-1', 'КН-51']
 NUMBER_TEACHERS = 5
 NUMBER_STUDENTS = 50
 fake = Faker()
-connect = sqlite3.connect('users_hw.db')
+connect = sqlite3.connect(database=database)
 cur = connect.cursor()
 
 

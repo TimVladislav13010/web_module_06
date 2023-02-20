@@ -1,13 +1,14 @@
-from psycopg2 import connect, Error
 from contextlib import contextmanager
+from sqlite3 import connect, Error
+
+database = './users_hw.db'
 
 
 @contextmanager
 def connection():
     conn = None
     try:
-        conn = connect(host='localhost', user='users_hw.db', database='users_hw.db',
-                       password='')
+        conn = connect(database=database)
         yield conn
         conn.commit()
     except Error as error:
